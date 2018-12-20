@@ -1,5 +1,5 @@
 # rn-img-cache
-First, this project is improved from [react-native-img-cache](https://github.com/wcandillon/react-native-img-cache). Honestly, [react-native-img-cache](https://github.com/wcandillon/react-native-img-cache) is very easy to use, but I don't find it verifing whether the file correct in my real woriking situation, so sometimes we just could see a part of a image(kill the app process when downloading the image).So I modified the code to create a temp file when downloading, and made it right after the downloading was done. It's just so easy.
+First, this project is improved from [react-native-img-cache](https://github.com/wcandillon/react-native-img-cache). Honestly, [react-native-img-cache](https://github.com/wcandillon/react-native-img-cache) is very easy to use, but I don't find it verifing whether the file correct in my real working situation, so sometimes we just could see a part of a image(kill the app process when downloading the image).So I modified the code to create a temp file when downloading, and made it right after the downloading was done. It's just so easy.
 
 ## Showcase
 
@@ -60,7 +60,7 @@ onLoadEnded={(flag) => {
 
 - transitionDuration(optional,default 300ms), the fadeIn anim duration (ms)
 
-- onLoadEnded(optional), the callback of downloading status, be careful, it's not 'onLoadEnd'!
+- onLoadEnded(optional), the callback of downloading status, no matter the downloading is successful or not , it always will be called. be careful, it's not 'onLoadEnd'!
 
 ---
 
@@ -123,4 +123,4 @@ onLoadEnded={(flag) => {
 
 - transitionDuration(可选的,默认 300毫秒), 渐显动画的时长，单位毫秒
 
-- onLoadEnded(可选的), 判断图片是否加载完成，注意，它不是'onLoadEnd'
+- onLoadEnded(可选的), 判断图片是否加载完成，无论是否下载完成，都会回调该方法。注意，它不是'onLoadEnd'
